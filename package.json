@@ -1,0 +1,18 @@
+{
+  "name": "playcode",
+  "version": "1.0.0",
+  "description": "Single-server Discord bot for a Roblox game studio: one-command server setup, verification, tickets, bug reports, suggestions, devlogs and moderation.",
+  "main": "src/index.js",
+  "private": true,
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node test/mock-setup.test.js"
+  },
+  "engines": {
+    "node": ">=18.17"
+  },
+  "dependencies": {
+    "discord.js": "^14.27.0",
+    "dotenv": "^18.0.5"
+  }
+}
