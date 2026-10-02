@@ -48,7 +48,8 @@ function start() {
   const ctx = { client, store, config };
 
   client.once(Events.ClientReady, async (c) => {
-    console.log(`[ready] Logged in as ${c.user.tag}`);
+    const commit = (process.env.RAILWAY_GIT_COMMIT_SHA || '').slice(0, 7);
+    console.log(`[ready] Logged in as ${c.user.tag} · PlayCode ${require('../package.json').version}${commit ? ` · commit ${commit}` : ''}`);
     const home = c.guilds.cache.get(config.guildId);
     const others = c.guilds.cache.filter((g) => g.id !== config.guildId);
     if (home) {

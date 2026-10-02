@@ -1,6 +1,6 @@
 {
   "name": "playcode",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Single-server Discord bot for a Roblox game studio: one-command server setup, verification, tickets, bug reports, suggestions, devlogs and moderation.",
   "main": "src/index.js",
   "private": true,
