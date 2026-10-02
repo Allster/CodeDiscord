@@ -1,4 +1,4 @@
-# PlayCode
+# DiscordBot
 
 A Discord bot for one Roblox game studio's server. Run `/setup` once and it builds the whole server: roles, channels, permissions, a verification gate that works with RoVer, ping-role menu and a ticket panel. After that it runs the day-to-day: bug reports, suggestions, devlogs and update posts, playtests with RSVPs, tickets and moderation.
 
@@ -41,7 +41,7 @@ Run it again any time to put back anything that went missing. Re-runs don't touc
 
 How the main features work:
 
-- **Verification (RoVer)**: PlayCode doesn't verify anyone itself. [RoVer](https://rover.link) links Roblox accounts and sets nicknames; PlayCode just builds the gate. New members only see #welcome, #rules and #verify until they have the **Verified** role, then the rest of the server opens up. In RoVer's settings, set its verified role to the **Verified** role PlayCode made, and put RoVer's own role above Verified so it can hand it out.
+- **Verification (RoVer)**: DiscordBot doesn't verify anyone itself. [RoVer](https://rover.link) links Roblox accounts and sets nicknames; PlayCode just builds the gate. New members only see #welcome, #rules and #verify until they have the **Verified** role, then the rest of the server opens up. In RoVer's settings, set its verified role to the **Verified** role PlayCode made, and put RoVer's own role above Verified so it can hand it out.
 - **Bug reports and suggestions**: `/bug` and `/suggest` open a form, post to the right channel with a discussion thread, and get a number. Staff change the status from a menu on the post (Confirmed, Fixed, Planned, Denied…), and the author gets a DM when it's resolved. Suggestions have up/down vote buttons.
 - **Tickets**: Get help, Report a player, Join the team (applications also copy to #applications) and Business. Each opens a private channel. Closing one saves a transcript to #mod-log and DMs a copy to the member.
 - **Posts**: `/post` opens a form so line breaks work. Game updates turn each line into a bullet and ping Update Ping; devlogs ping Devlog Ping. Posts in announcement channels are auto-published to following servers.
