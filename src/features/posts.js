@@ -56,8 +56,13 @@ async function handle(interaction, { store, config }) {
     .setFooter({ text: `${k.label} · ${store.get('setup', 'studioName') || interaction.guild.name}` }).setTimestamp();
   if (link) { try { e.setURL(new URL(link).toString()); } catch { /* ignore bad links */ } }
   const files = [];
-  if (p.image && !p.image.video) e.setImage(p.image.url);
-  if (p.image?.video) files.push({ attachment: p.image.url, name: p.image.name });
+  // Re-upload the file with the post: attachment links from a slash command expire after a while.
+  if (p.image) {
+    const ext = (p.image.name.match(/\.([a-z0-9]{2,5})$/i)?.[1] || (p.image.video ? 'mp4' : 'png')).toLowerCase();
+    const name = `${p.image.video ? 'video' : 'image'}.${ext}`;
+    files.push({ attachment: p.image.url, name });
+    if (!p.image.video) e.setImage(`attachment://${name}`);
+  }
 
   const pingRole = p.ping && k.ping ? store.roleId(k.ping) : null;
   const mentions = [p.everyone && isStaff(interaction.member, store, config) ? '@everyone' : null, pingRole ? `<@&${pingRole}>` : null].filter(Boolean);

@@ -107,7 +107,7 @@ const commands = [
       );
       if (staff) {
         e.addFields(
-          { name: 'Staff', value: '`/post` announcements and game updates · `/note` add a note to a bug/suggestion · status menus on bug and suggestion posts · `/ticket add|remove`' },
+          { name: 'Staff', value: '`/post` announcements and game updates · `/embed send|edit` custom embeds · `/note` add a note to a bug/suggestion · status menus on bug and suggestion posts · `/ticket add|remove`' },
           { name: 'Moderation', value: '`/warn` `/warnings` `/timeout` `/untimeout` `/kick` `/ban` `/unban` `/purge` `/slowmode` `/lock` `/unlock`' },
           { name: 'Admin', value: '`/setup` build or repair the server · `/panel` re-post a panel · `/config` view and change settings' },
         );

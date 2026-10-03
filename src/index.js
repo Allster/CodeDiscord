@@ -8,6 +8,7 @@ const { respond } = require('./lib/util');
 const admin = require('./commands/admin');
 const moderation = require('./commands/moderation');
 const community = require('./commands/community');
+const embedCmd = require('./commands/embed');
 const roles = require('./features/roles');
 const tickets = require('./features/tickets');
 const feedback = require('./features/feedback');
@@ -15,7 +16,7 @@ const posts = require('./features/posts');
 const playtests = require('./features/playtests');
 const members = require('./features/members');
 
-const COMMANDS = [...admin.commands, ...moderation.commands, ...community.commands];
+const COMMANDS = [...admin.commands, ...moderation.commands, ...community.commands, ...embedCmd.commands];
 const byName = new Map(COMMANDS.map((c) => [c.data.name, c]));
 
 // customId "pc:<feature>:…" → handler
@@ -27,6 +28,7 @@ const COMPONENTS = {
   sug: feedback.handle,
   post: posts.handle,
   pt: playtests.handle,
+  embed: embedCmd.handle,
 };
 
 async function registerCommands() {

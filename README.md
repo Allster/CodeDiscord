@@ -35,7 +35,7 @@ Run it again any time to put back anything that went missing. Re-runs don't touc
 |---|---|
 | Everyone | `/bug`, `/suggest`, `/roblox`, `/ticket close`, `/help` |
 | Studio team | `/post` (devlog, sneak peek), `/playtest schedule`, `/playtest cancel` |
-| Staff | `/post` (announcement, game update), `/note`, `/ticket add/remove`, status menus on bug and suggestion posts |
+| Staff | `/post` (announcement, game update), `/embed send`, `/embed edit`, `/note`, `/ticket add/remove`, status menus on bug and suggestion posts |
 | Moderation | `/warn`, `/warnings`, `/timeout`, `/untimeout`, `/kick`, `/ban`, `/unban`, `/purge`, `/slowmode`, `/lock`, `/unlock` |
 | Admin | `/setup`, `/panel`, `/config` |
 
@@ -45,6 +45,7 @@ How the main features work:
 - **Bug reports and suggestions**: `/bug` and `/suggest` open a form, post to the right channel with a discussion thread, and get a number. Staff change the status from a menu on the post (Confirmed, Fixed, Planned, Denied…), and the author gets a DM when it's resolved. Suggestions have up/down vote buttons.
 - **Tickets**: Get help, Report a player, Join the team (applications also copy to #applications) and Business. Each opens a private channel. Closing one saves a transcript to #mod-log and DMs a copy to the member.
 - **Posts**: `/post` opens a form so line breaks work. Game updates turn each line into a bullet and ping Update Ping; devlogs ping Devlog Ping. Posts in announcement channels are auto-published to following servers.
+- **Custom embeds**: `/embed send` opens a form for the title, text, fields (one per line as `Name | Value`, add `| inline` to sit side by side), footer and title link. Pick the channel, colour (hex like `#ff8800` or a name), image, thumbnail, a role to ping and whether to show the time. `/embed edit` with a message link opens the same form filled in with what's there now, so you can fix typos or swap the image.
 - **Playtests**: `/playtest schedule starts_in:2h` posts a card with Going/Maybe/Can't buttons, pings Playtest Ping, reminds the Going list 15 minutes before and at start.
 - **Moderation**: every action gets a case number in #mod-log and the member is DM'd when possible. Joins (with a new-account warning) and leaves are logged too.
 
